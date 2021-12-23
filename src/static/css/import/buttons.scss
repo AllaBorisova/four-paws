@@ -1,0 +1,115 @@
+.button {
+    @include flexcc;
+    width: 26rem;
+    height: 5rem;
+    background: #ffffff;
+    border-radius: 3rem;
+    color: $orange;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    border: none;
+    cursor: pointer;
+    @include tr;
+    @media (max-width:768px) {
+        height: 3.6rem;
+        font-size: 1.6rem;
+        width:100%;
+    }
+    &_orange {
+        background: $orange;
+        color: #ffffff;
+        &:hover {
+            background: #ff6927;
+            box-shadow: 0px 0px 0.8rem 1px rgba(0, 0, 0, 0.25);
+        }
+        &:active {
+            background: #ff4e00;
+            box-shadow: 0px 0px 0.8rem 1px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &_news {
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &_grey {
+        background: #bdbcc5;
+        color: #fff;
+        margin: 0 auto;
+    }
+    &_white {
+        border: 0.4rem solid #ffffff;
+        &:hover {
+            background: none;
+          
+            color: #fff;
+        }
+    }
+}
+.owl-carousel .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    z-index: 999;
+    button.owl-dot {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.3rem;
+        span {
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            background: #ffffff;
+            opacity: 0.65;
+            transition: all 0.25s ease;
+            border-radius: 50%;
+        }
+        &.active {
+            span {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+            }
+        }
+    }
+}
+.tabs {
+    > ul {
+        @include ulClean;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        > li {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            margin-right: 1.1rem;
+            margin-bottom: 1.1rem;
+            padding: 1rem 2rem;
+            border: 1px solid #2b2a30;
+            border-radius: 3rem;
+            background: #ffffff;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            @media (max-width:768px) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                padding:0.5rem 1.5rem;
+            }
+            &.active,
+            &:hover {
+                background: $orange;
+                border-color: $orange;
+                color: #fff;
+            }
+        }
+    }
+}

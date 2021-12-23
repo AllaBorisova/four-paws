@@ -1,0 +1,131 @@
+.footer {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    @media (max-width: 768px) {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 4rem;
+        position: relative;
+        padding-bottom: 4rem;
+        @media (max-width: 768px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            border-top: 1px solid #d8d8d8;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__copyright {
+        @media (max-width: 768px) {
+            order: 3;
+        }
+        p {
+            color: #999999;
+            margin-bottom: 2rem;
+            @media (max-width: 768px) {
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+    
+
+    &__politics {
+        padding-left: 5.3rem;
+        @media (max-width: 768px) {
+            padding-left: 0;
+            order: 2;
+            margin-bottom: 1.2rem;
+        }
+        a {
+            color: #999999;
+        }
+    }
+    &__contacts {
+        margin-left: auto;
+        text-align: right;
+        color: #999999;
+        @media (max-width: 768px) {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+            @media (max-width: 768px) {
+                margin-bottom: 1.2rem;
+            }
+        }
+        a {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: #999999;
+            @media (max-width: 768px) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+.fixed-icons {
+    position: fixed;
+    right: 2rem;
+    bottom: 2.4rem;
+    z-index: 999;
+    @media (max-width:768px) {
+        right:1rem;
+        bottom:1rem;
+    }
+    a {
+        display: block;
+        margin-top: 1.6rem;
+        @media (max-width:768px) {
+            margin-top:1rem;
+        }
+        img {
+            display: block;
+        }
+    }
+}
+.socials {
+    display: flex;
+    align-items: center;
+
+    a {
+        display: block;
+        margin-right: 2.5rem;
+        @media (max-width:768px) {
+          
+            margin-right:1.6rem;
+        }
+        svg {
+            @media (max-width:768px) {
+                max-width:1.6rem;
+            }
+            path {
+                @include tr;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: $orange;
+                    stroke: $orange;
+                }
+            }
+        }
+    }
+}
