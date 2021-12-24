@@ -6,7 +6,8 @@ $(function () {
       dots: true,
       nav: false,
       navText: ['', ''],
-      items: 1
+      items: 1,
+      margin:10
     };
   var owl3 = $('.life__photos'),
     owlOptions3 = {
@@ -14,7 +15,8 @@ $(function () {
       dots: true,
       nav: false,
       navText: ['', ''],
-      items: 1
+      items: 1,
+      margin:10
     };
 
 
